@@ -1,347 +1,439 @@
-/* root  */
-
-* {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-style: normal;
-}
-
-body {
-  padding: 0;
-  margin: 0;
-  font-family: "DM Sans", sans-serif;
-  color: rgba(255, 255, 255, 0.815);
-  background: #1e1e1e;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-}
-
-.tabcontent {
-  display: none;
-}
-
-:root {
-  --light: #f8f9fa;
-  --secondary: #adb5bd;
-  --dark: #343a40;
-  --primary-color: #f15bb5;
-  --secondary-color: #2ec4b6;
-  --border: #e9ecef;
-  --basic: "Mukta", sans-serif;
-}
-
-a {
-  text-decoration: none;
-}
-
-* > * {
-  box-sizing: border-box;
-}
-/* global */
-
-.container {
-  max-width: 100%;
-  padding: 0px 1%;
-  margin: auto;
-  color: white;
-  background: #1e1e1e;
-}
-
-.text-light {
-  color: var(--light);
-}
-
-.text-secondary {
-  color: var(--secondary);
-}
-
-.text-dark {
-  color: var(--dark);
-}
-
-.text-primary {
-  color: var(--primary-color);
-}
-
-.bg-light {
-  background-color: var(--light);
-}
-
-.img-fluid {
-  width: 100%;
-}
-
-.logo {
-  color: #f4d19a;
-  background: #1e1e1e;
-  display: flex;
-}
-
-.logo2 {
-  height: 100px;
-  width: 100px;
-  display: flex;
-  position: relative;
-  /*left: 25px;*/
-}
-
-#site-.main {
-  margin-top: 8em;
-}
-
-.btn {
-  border: none;
-  padding: 15px 20px;
-}
-
-.btn-primary {
-  border-radius: 4px;
-  background-color: var(--secondary);
-}
-
-.abc {
-  padding-left: 4%;
-  padding-right: 4%;
-}
-.a {
-  height: 20px;
-}
-/* ----main section---- */
-
-.navbar {
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding-top: 1%;
-  padding-right: 4%;
-  margin-bottom: 1%;
-}
-
-.nav-brand {
-  font-family: "Handlee", cursive;
-  font-weight: bolder;
-  align-self: center;
-  justify-content: center;
-  align-items: center;
-  font-size: 50px;
-}
-
-.collapse {
-  align-self: center;
-}
-
-.nav-link {
-  font-size: 18px;
-  margin: 18px;
-  color: #e6e6e6;
-}
-
-.nav-link:hover {
-  background: linear-gradient(135deg, #ff5f6d 2.88%, #ffc371 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
-}
-
-.toggle-button {
-  font-size: 21px;
-  background-color: transparent;
-  border: none;
-  position: absolute;
-  right: 0;
-  margin: 8px 10px;
-  display: none;
-}
-
-.HomeContainer {
-  display: flex;
-  flex-direction: row;
-  align-content: center;
-  justify-content: center;
-  column-gap: 3%;
-  padding-left: 5%;
-  padding-right: 5%;
-}
-
-.homeText {
-  font-size: 1.1em;
-  line-height: 200%;
-}
-
-.homeTextHead {
-  text-align: justify;
-}
-
-.frame6 {
-  display: flex;
-  align-items: flex-start;
-  /* Inside auto layout */
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-}
-
-.Acti_cont,
-.counsHeadFirst {
-  font-style: normal;
-  font-weight: 700;
-  font-size: 35px;
-  /* identical to box height, or 91px */
-  display: flex;
-  align-items: center;
-  letter-spacing: 0.005em;
-  /* fire */
-  background: linear-gradient(135deg, #ff5f6d 2.88%, #ffc371 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
-  margin: 1% 0%;
-}
-
-.im {
-  width: 100%;
-  height: 200px;
-}
-
-.activitiesContainer,
-.counsellorContainer {
-  width: 100%;
-  display: flex;
-  gap: 1%;
-}
-
-.counsellor {
-  padding: 1.5%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: #ffffff14;
-  width: 30%;
-  height: 390px;
-}
-
-.activityPhoto,
-.counsellorPhoto {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  width: 100%;
-}
-
-.counsellorContent {
-  display: flex;
-  flex-direction: column;
-}
-
-.counsellorName {
-  color: #f4d19a;
-  font-size: large;
-  margin: 2%;
-}
-
-.activityHeadingContent,
-.counsHeadSecond,
-.counsellorContact {
-  font-style: normal;
-  font-size: large;
-  color: #e6e6e6;
-  margin: 2% 0%;
-}
-
-.counsellorbody {
-  margin: 1% 4%;
-}
-
-#more1,
-#more2,
-#more3,
-#more4 {
-  display: none;
-}
-
-#myBtn {
-  background: #ffffff14;
-  border-radius: 0%;
-  color: white;
-}
-
-/* ----navigation menu---- */
-/* ---- media query ---- */
-
-@media (max-width: 992px) {
-  .navbar {
-    flex-direction: column;
-  }
-  .gridz .grid-item {
-    width: calc(50% - 20px);
-    margin-bottom: 3em;
-  }
-}
-
-@media (max-width: 574px) {
-  #actBody {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-left: 2%;
-    padding-right: 2%;
-  }
-  .grid .grid-item {
-    width: calc(100% - 20px);
-    margin-bottom: 3em;
-  }
-  .toggle-button {
-    display: initial;
-    color: white;
-  }
-  .logo2 {
-    left: 20px;
-  }
-  .collapse {
-    max-height: 0px;
-    overflow: hidden;
-    transition: all 0.3s ease-in;
-  }
-  .collapse .nav-link {
-    display: block;
-    text-align: center;
-  }
-  .search-box {
-    border-right: none;
-  }
-  .collapse-toggle {
-    max-height: 500px;
-  }
-  .HomeContainer {
-    flex-direction: column;
-  }
-  .homeText {
-    font-size: 1.1em;
-    line-height: 180%;
-    text-align: justify;
-  }
-  .homeTextHead {
-    text-align: left;
-  }
-  .counsellorContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    row-gap: 10px;
-  }
-  .counsellor {
-    width: 95%;
-    height: 100%;
-  }
-  .im {
-    height: 20%;
-  }
-  .counsellorPhoto {
-    height: 20%;
-  }
-}
+                /* root  */
+                
+                * {
+                    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+                    font-style: normal;
+                }
+                
+                .slider {
+                    position: relative;
+                    top: 60px;
+                    width: 35vw;
+                    height: 53.9vh;
+                    background-color: yellow;
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-top: 0px;
+                    text-align: center;
+                    overflow: hidden;
+                }
+                
+                .image-container {
+                    width: 1500px;
+                    background-color: pink;
+                    height: 300px;
+                    clear: both;
+                    position: relative;
+                    -webkit-transition: left 2s;
+                    -moz-transition: left 2s;
+                    -o-transition: left 2s;
+                    transition: left 2s;
+                }
+                
+                .slide {
+                    float: left;
+                    margin: 0px;
+                    padding: 0px;
+                    position: relative;
+                }
+                
+                #slide-1:target~.image-container {
+                    left: 0px;
+                }
+                
+                #slide-2:target~.image-container {
+                    left: -500px;
+                }
+                
+                #slide-3:target~.image-container {
+                    left: -1000px;
+                }
+                
+                .buttons {
+                    position: relative;
+                    top: -20px;
+                }
+                
+                .buttons a {
+                    display: inline-block;
+                    height: 15px;
+                    width: 15px;
+                    border-radius: 50px;
+                    background-color: lightgreen;
+                }
+                
+                body {
+                    padding: 0;
+                    margin: 0;
+                    font-family: "DM Sans", sans-serif;
+                    color: #4B4B4B;
+                    background: #FFFFFF;
+                    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+                }
+                
+                .tabcontent {
+                    display: none;
+                }
+                
+                 :root {
+                    --light: #f8f9fa;
+                    --secondary: #adb5bd;
+                    --dark: #343a40;
+                    --primary-color: #f15bb5;
+                    --secondary-color: #2ec4b6;
+                    --border: #e9ecef;
+                    --basic: "Mukta", sans-serif;
+                }
+                
+                a {
+                    text-decoration: none;
+                }
+                
+                *>* {
+                    box-sizing: border-box;
+                }
+                /* global */
+                
+                .container {
+                    max-width: 100%;
+                    padding: 0px 1%;
+                    margin: auto;
+                    background: #FFFFFF;
+                }
+                
+                .text-light {
+                    color: var(--light);
+                }
+                
+                .text-secondary {
+                    color: var(--secondary);
+                }
+                
+                .text-dark {
+                    color: var(--dark);
+                }
+                
+                .text-primary {
+                    color: var(--primary-color);
+                }
+                
+                .bg-light {
+                    background-color: var(--light);
+                }
+                
+                .img-fluid {
+                    width: 100%;
+                }
+                
+                .logo {
+                    color: #f4d19a;
+                    background: #1e1e1e;
+                    display: flex;
+                }
+                
+                .logo2 {
+                    height: 100px;
+                    width: 100px;
+                    display: flex;
+                    position: relative;
+                    /*left: 25px;*/
+                }
+                
+                #site-.main {
+                    margin-top: 8em;
+                }
+                
+                .btn {
+                    border: none;
+                    padding: 15px 20px;
+                }
+                
+                .btn-primary {
+                    border-radius: 4px;
+                    background-color: var(--secondary);
+                }
+                
+                .abc {
+                    padding-left: 4%;
+                    padding-right: 4%;
+                }
+                
+                .a {
+                    height: 20px;
+                }
+                /* ----main section---- */
+                
+                .navbar {
+                    position: relative;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    padding-top: 1%;
+                    padding-right: 4%;
+                    margin-bottom: 1%;
+                }
+                
+                .nav-brand {
+                    font-family: "Handlee", cursive;
+                    font-weight: bolder;
+                    align-self: center;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 50px;
+                }
+                
+                .collapse {
+                    align-self: center;
+                }
+                
+                .nav-link {
+                    font-size: 18px;
+                    margin: 18px;
+                    color: #515151;
+                }
+                
+                .nav-link:hover {
+                    background: linear-gradient(135deg, #ff5f6d 2.88%, #ffc371 100%);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    background-clip: text;
+                    text-fill-color: transparent;
+                }
+                
+                .toggle-button {
+                    font-size: 21px;
+                    background-color: transparent;
+                    border: none;
+                    position: absolute;
+                    right: 0;
+                    margin: 8px 10px;
+                    display: none;
+                }
+                
+                .HomeContainer {
+                    display: flex;
+                    flex-direction: row;
+                    align-content: center;
+                    justify-content: center;
+                    column-gap: 3%;
+                    padding-left: 5%;
+                    padding-right: 5%;
+                }
+                
+                .homeText {
+                    font-size: 1.1em;
+                    line-height: 200%;
+                    color: #4B4B4B;
+                }
+                
+                .homeTextHead {
+                    text-align: justify;
+                    color: #4B4B4B;
+                }
+                
+                .frame6 {
+                    display: flex;
+                    align-items: flex-start;
+                    /* Inside auto layout */
+                    flex: none;
+                    order: 0;
+                    flex-grow: 0;
+                }
+                
+                .Acti_cont,
+                .counsHeadFirst {
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 35px;
+                    /* identical to box height, or 91px */
+                    display: flex;
+                    align-items: center;
+                    letter-spacing: 0.005em;
+                    /* fire */
+                    background: linear-gradient(135deg, #ff5f6d 2.88%, #ffc371 100%);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    background-clip: text;
+                    text-fill-color: transparent;
+                    margin: 1% 0%;
+                }
+                
+                .im {
+                    width: 100%;
+                    height: 200px;
+                }
+                
+                .activitiesContainer,
+                .counsellorContainer {
+                    width: 100%;
+                    display: flex;
+                    gap: 1%;
+                }
+                
+                .counsellor {
+                    padding: 1.5%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    background: #0000000A;
+                    width: 30%;
+                    height: 390px;
+                    border-radius: 5px solid rgb(71, 64, 64);
+                }
+                
+                #homIm {
+                    position: relative;
+                    top: 30px;
+                    height: 400px;
+                    width: 400px;
+                }
+                
+                #rak,
+                #pal {
+                    position: relative;
+                    top: -12px
+                }
+                
+                .activityPhoto,
+                .counsellorPhoto {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 500px;
+                    width: 100%;
+                    margin-top: 0px;
+                }
+                
+                .counsellorContent {
+                    display: flex;
+                    flex-direction: column;
+                }
+                
+                .counsellorName {
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 17px;
+                    /* identical to box height, or 91px */
+                    display: flex;
+                    align-items: center;
+                    letter-spacing: 0.005em;
+                    /* fire */
+                    background: linear-gradient(135deg, #ff5f6d 2.88%, #ffc371 100%);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    background-clip: text;
+                    text-fill-color: transparent;
+                    margin: 1% 0%;
+                }
+                
+                .activityHeadingContent,
+                .counsHeadSecond,
+                .counsellorContact {
+                    font-style: normal;
+                    font-size: large;
+                    background: #ffffff14;
+                    color: #4B4B4B;
+                    margin: 2% 0%;
+                }
+                
+                .counsellorbody {
+                    margin: 1% 4%;
+                }
+                
+                #more1,
+                #more2,
+                #more3,
+                #more4 {
+                    display: none;
+                }
+                
+                #myBtn {
+                    background: #ffffff14;
+                    border-radius: 0%;
+                    color: #4B4B4B;
+                }
+                /* ----navigation menu---- */
+                /* ---- media query ---- */
+                
+                @media (max-width: 992px) {
+                    .navbar {
+                        flex-direction: column;
+                    }
+                    .gridz .grid-item {
+                        width: calc(50% - 20px);
+                        margin-bottom: 3em;
+                    }
+                    .slider {
+                        position: relative;
+                        top: 2px;
+                    }
+                }
+                
+                @media (max-width: 574px) {
+                    .slider {
+                        position: relative;
+                        top: 2px;
+                    }
+                    #actBody {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        padding-left: 2%;
+                        padding-right: 2%;
+                    }
+                    .grid .grid-item {
+                        width: calc(100% - 20px);
+                        margin-bottom: 3em;
+                    }
+                    .toggle-button {
+                        display: initial;
+                        color: #4B4B4B;
+                    }
+                    .logo2 {
+                        /*left: 20px;*/
+                    }
+                    .collapse {
+                        max-height: 0px;
+                        overflow: hidden;
+                        transition: all 0.3s ease-in;
+                    }
+                    .collapse .nav-link {
+                        display: block;
+                        text-align: center;
+                    }
+                    .search-box {
+                        border-right: none;
+                    }
+                    .collapse-toggle {
+                        max-height: 500px;
+                    }
+                    .HomeContainer {
+                        flex-direction: column;
+                    }
+                    .homeText {
+                        font-size: 1.1em;
+                        line-height: 180%;
+                        text-align: justify;
+                    }
+                    .homeTextHead {
+                        text-align: left;
+                    }
+                    .counsellorContainer {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+                        row-gap: 10px;
+                    }
+                    .counsellor {
+                        width: 95%;
+                        height: 100%;
+                    }
+                    .im {
+                        height: 20%;
+                    }
+                    .counsellorPhoto {
+                        height: 20%;
+                    }
+                }
