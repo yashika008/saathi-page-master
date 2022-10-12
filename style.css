@@ -5,12 +5,28 @@
                     font-style: normal;
                 }
                 
+                .aa{
+                    text-decoration: none;
+                    color: black;
+                }
+                  .button1{
+                  
+                    border: none;
+                    color: black;
+                    padding: 15px 32px;
+                    text-align: center;
+                    text-decoration: none;
+                    display: inline-block;
+                    font-size: 16px;
+                   
+                  }
+               
                 .slider {
                     position: relative;
                     top: 60px;
                     width: 35vw;
                     height: 53.9vh;
-                    background-color: yellow;
+                    background-color: white
                     margin-left: auto;
                     margin-right: auto;
                     margin-top: 0px;
@@ -27,6 +43,7 @@
                     -webkit-transition: left 2s;
                     -moz-transition: left 2s;
                     -o-transition: left 2s;
+                    transition: left 2s;
                     transition: left 2s;
                 }
                 
@@ -48,7 +65,15 @@
                 #slide-3:target~.image-container {
                     left: -1000px;
                 }
-                
+                #slide-4:target~.image-container {
+                    left: -1500px;
+                }
+                #slide-5:target~.image-container {
+                    left: -2000px;
+                }
+                #slide-6:target~.image-container {
+                    left: -2500px;
+                }
                 .buttons {
                     position: relative;
                     top: -20px;
@@ -61,7 +86,11 @@
                     border-radius: 50px;
                     background-color: lightgreen;
                 }
-                
+                .im1{
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+                }
                 body {
                     padding: 0;
                     margin: 0;
@@ -70,7 +99,8 @@
                     background: #FFFFFF;
                     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
                 }
-                
+
+
                 .tabcontent {
                     display: none;
                 }
@@ -136,6 +166,8 @@
                     width: 100px;
                     display: flex;
                     position: relative;
+                    padding-left: 0%;
+                    margin-left: 0%;
                     /*left: 25px;*/
                 }
                 
@@ -172,13 +204,26 @@
                     padding-right: 4%;
                     margin-bottom: 1%;
                 }
-                
+                .hero{
+                    display:flex;
+                 
+                    justify-content:space-evenly;
+
+                  }
+                  
+                  @media(max-width:880px){
+                    .hero{
+                      flex-direction:column;
+                      align-items:center;
+                    }
+                  }
                 .nav-brand {
                     font-family: "Handlee", cursive;
                     font-weight: bolder;
                     align-self: center;
                     justify-content: center;
                     align-items: center;
+                    margin-right: 2%;
                     font-size: 50px;
                 }
                 
@@ -191,13 +236,10 @@
                     margin: 18px;
                     color: #515151;
                 }
-                
+         
                 .nav-link:hover {
-                    background: linear-gradient(135deg, #ff5f6d 2.88%, #ffc371 100%);
-                    -webkit-background-clip: text;
-                    -webkit-text-fill-color: transparent;
-                    background-clip: text;
-                    text-fill-color: transparent;
+                    color: #ff5f6d;
+                 
                 }
                 
                 .toggle-button {
@@ -243,19 +285,15 @@
                 .Acti_cont,
                 .counsHeadFirst {
                     font-style: normal;
-                    font-weight: 700;
+                    font-weight: 800;
                     font-size: 35px;
                     /* identical to box height, or 91px */
                     display: flex;
                     align-items: center;
                     letter-spacing: 0.005em;
                     /* fire */
-                    background: linear-gradient(135deg, #ff5f6d 2.88%, #ffc371 100%);
-                    -webkit-background-clip: text;
-                    -webkit-text-fill-color: transparent;
-                    background-clip: text;
-                    text-fill-color: transparent;
-                    margin: 1% 0%;
+                  color: #ff5f6d;
+                  
                 }
                 
                 .im {
@@ -319,11 +357,8 @@
                     align-items: center;
                     letter-spacing: 0.005em;
                     /* fire */
-                    background: linear-gradient(135deg, #ff5f6d 2.88%, #ffc371 100%);
-                    -webkit-background-clip: text;
-                    -webkit-text-fill-color: transparent;
-                    background-clip: text;
-                    text-fill-color: transparent;
+                    color: #ff5f6d;
+                   
                     margin: 1% 0%;
                 }
                 
@@ -335,6 +370,19 @@
                     background: #ffffff14;
                     color: #4B4B4B;
                     margin: 2% 0%;
+                }
+
+                .peer{
+
+                    text-align: center;
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 60px;
+                  justify-content: center;
+                    align-items: center;
+                    letter-spacing: 0.05em;
+   
+                  
                 }
                 
                 .counsellorbody {
@@ -371,6 +419,7 @@
                 }
                 
                 @media (max-width: 574px) {
+                  
                     .slider {
                         position: relative;
                         top: 2px;
@@ -392,7 +441,9 @@
                     }
                     .logo2 {
                         /*left: 20px;*/
+                        right: -20px;
                     }
+
                     .collapse {
                         max-height: 0px;
                         overflow: hidden;
@@ -407,6 +458,7 @@
                     }
                     .collapse-toggle {
                         max-height: 500px;
+                        align-items: center;
                     }
                     .HomeContainer {
                         flex-direction: column;
